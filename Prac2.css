@@ -1,0 +1,215 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.left-column, .right-column {
+    width: 45%;
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.input-group input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    border-right: none;
+}
+
+.add-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.item input[type="text"] {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.item-quantity {
+    width: 20px;
+    text-align: center;
+}
+
+.crossed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.bought .item-name {
+    text-decoration: line-through;
+    color: #888;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 5px;
+    background: #e7e7e7;
+}
+
+.add-btn, .btn, .delete-btn, .plus-btn, .minus-btn {
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+.add-btn {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn.bought {
+    background-color: #6c757d;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.plus-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.minus-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.remaining, .bought {
+    margin-top: 20px;
+}
+
+.remaining-item, .bought-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.badge {
+    background-color: #ff9800;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+.right-column h3 {
+    margin: 10px 0;
+}
+
+
+#badge {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: darkviolet;
+    color: white;
+    padding: 10px 20px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#badge:hover {
+    transform: translateY(-20px);
+    background-color: violet;
+}
+
+#badge::after {
+    content: "Made by Bryk Mykhailo";
+    display: none;
+}
+
+#badge:hover::after {
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background-color: white;
+    color: darkviolet;
+    padding: 5px 10px;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid darkviolet;
+}
+
+
+button[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    background-color: darkviolet;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+}
+
+button[data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1);
+}
+
+
+@media (max-width: 500px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+    }
+}

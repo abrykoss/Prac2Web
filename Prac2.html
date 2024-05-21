@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик покупок</title>
+    <link rel="stylesheet" href="Prac2.css">
+</head>
+<body>
+<div class="container">
+    <div class="left-column">
+        <div class="input-group">
+            <label>
+                <input type="text" placeholder="Назва товару">
+            </label>
+            <button class="add-btn">Додати</button>
+        </div>
+
+        <div class="item bought">
+            <span class="item-name crossed">Помідори</span>
+            <span class="item-quantity">2</span>
+            <button class="btn bought">Куплено</button>
+            <button class="delete-btn">✖</button>
+        </div>
+
+        <div class="item">
+            <span class="item-name">Печиво</span>
+            <button class="minus-btn">-</button>
+            <span class="item-quantity">2</span>
+            <button class="plus-btn">+</button>
+            <button class="btn">Не куплено</button>
+            <button class="delete-btn">✖</button>
+        </div>
+
+        <div class="item">
+            <label>
+                <input type="text" value="Сир">
+            </label>
+            <button class="minus-btn">-</button>
+            <span class="item-quantity">1</span>
+            <button class="plus-btn">+</button>
+            <button class="btn">Не куплено</button>
+            <button class="delete-btn">✖</button>
+        </div>
+    </div>
+
+    <div class="right-column">
+        <div class="remaining">
+            <h3>Залишилося</h3>
+            <div class="remaining-item">Печиво <span class="badge">2</span></div>
+            <div class="remaining-item">Сир <span class="badge">1</span></div>
+        </div>
+
+        <div class="bought">
+            <h3>Куплено</h3>
+            <div class="bought-item">Помідори <span class="badge">2</span></div>
+        </div>
+    </div>
+</div>
+
+<div class="badge" id="badge">
+    BuyList
+</div>
+</body>
+</html>
