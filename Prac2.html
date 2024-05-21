@@ -10,37 +10,33 @@
 <div class="container">
     <div class="left-column">
         <div class="input-group">
-            <label>
-                <input type="text" placeholder="Назва товару">
-            </label>
-            <button class="add-btn">Додати</button>
+            <input type="text" placeholder="Назва товару">
+            <button class="add-btn" data-tooltip="Додати новий товар">Додати</button>
         </div>
 
         <div class="item bought">
             <span class="item-name crossed">Помідори</span>
             <span class="item-quantity">2</span>
-            <button class="btn bought">Куплено</button>
-            <button class="delete-btn">✖</button>
+            <button class="btn bought" data-tooltip="Позначити як не куплено">Куплено</button>
+            <button class="delete-btn" data-tooltip="Видалити товар">✖</button>
         </div>
 
         <div class="item">
             <span class="item-name">Печиво</span>
-            <button class="minus-btn">-</button>
+            <button class="minus-btn" data-tooltip="Зменшити кількість">-</button>
             <span class="item-quantity">2</span>
-            <button class="plus-btn">+</button>
-            <button class="btn">Не куплено</button>
-            <button class="delete-btn">✖</button>
+            <button class="plus-btn" data-tooltip="Збільшити кількість">+</button>
+            <button class="btn" data-tooltip="Позначити як куплено">Не куплено</button>
+            <button class="delete-btn" data-tooltip="Видалити товар">✖</button>
         </div>
 
         <div class="item">
-            <label>
-                <input type="text" value="Сир">
-            </label>
-            <button class="minus-btn">-</button>
+            <input type="text" value="Сир">
+            <button class="minus-btn" data-tooltip="Зменшити кількість">-</button>
             <span class="item-quantity">1</span>
-            <button class="plus-btn">+</button>
-            <button class="btn">Не куплено</button>
-            <button class="delete-btn">✖</button>
+            <button class="plus-btn" data-tooltip="Збільшити кількість">+</button>
+            <button class="btn" data-tooltip="Позначити як куплено">Не куплено</button>
+            <button class="delete-btn" data-tooltip="Видалити товар">✖</button>
         </div>
     </div>
 
