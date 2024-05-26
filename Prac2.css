@@ -217,7 +217,10 @@ button[data-tooltip]:hover::after {
         #badge {
             background-color: white;
             border: 1px solid darkviolet;
+            color: darkviolet;
             content: "Made by Bryk Mykhailo";
+            padding: 10px 20px;
+            border-top-right-radius: 10px;
         }
     }
 }
