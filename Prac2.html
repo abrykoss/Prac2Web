@@ -6,7 +6,6 @@
     <title>Кошик покупок</title>
     <link rel="stylesheet" href="Prac2.css">
     <style>
-
         @media print {
             #badge {
                 background-color: white;
@@ -32,46 +31,26 @@
 <div class="container">
     <div class="left-column">
         <div class="input-group">
-            <input type="text" placeholder="Назва товару">
-            <button class="add-btn" data-tooltip="Додати новий товар">Додати</button>
+            <input type="text" id="item-input" placeholder="Назва товару">
+            <button class="add-btn" id="add-item-btn" data-tooltip="Додати новий товар">Додати</button>
         </div>
+        <div id="items-list">
 
-        <div class="item bought">
-            <span class="item-name crossed">Помідори</span>
-            <span class="item-quantity">2</span>
-            <button class="btn bought" data-tooltip="Позначити як не куплено">Куплено</button>
-            <button class="delete-btn" data-tooltip="Видалити товар">✖</button>
-        </div>
-
-        <div class="item">
-            <span class="item-name">Печиво</span>
-            <button class="minus-btn" data-tooltip="Зменшити кількість">-</button>
-            <span class="item-quantity">2</span>
-            <button class="plus-btn" data-tooltip="Збільшити кількість">+</button>
-            <button class="btn" data-tooltip="Позначити як куплено">Не куплено</button>
-            <button class="delete-btn" data-tooltip="Видалити товар">✖</button>
-        </div>
-
-        <div class="item">
-            <input type="text" value="Сир">
-            <button class="minus-btn" data-tooltip="Зменшити кількість">-</button>
-            <span class="item-quantity">1</span>
-            <button class="plus-btn" data-tooltip="Збільшити кількість">+</button>
-            <button class="btn" data-tooltip="Позначити як куплено">Не куплено</button>
-            <button class="delete-btn" data-tooltip="Видалити товар">✖</button>
         </div>
     </div>
 
     <div class="right-column">
         <div class="remaining">
             <h3>Залишилося</h3>
-            <div class="remaining-item">Печиво <span class="badge">2</span></div>
-            <div class="remaining-item">Сир <span class="badge">1</span></div>
-        </div>
+            <div id="remaining-items">
 
+            </div>
+        </div>
         <div class="bought">
             <h3>Куплено</h3>
-            <div class="bought-item">Помідори <span class="badge">2</span></div>
+            <div id="bought-items">
+
+            </div>
         </div>
     </div>
 </div>
@@ -79,5 +58,6 @@
 <div class="badge" id="badge">
     <span>BuyList</span>
 </div>
+<script src="Prac2.js"></script>
 </body>
 </html>
